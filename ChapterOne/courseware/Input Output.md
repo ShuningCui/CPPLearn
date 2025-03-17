@@ -4,6 +4,12 @@ theme: gaia
 paginate: true
 ---
 
+<style>
+    pre code {
+        font-size: 40px;
+    }
+</style>
+
 <!-- _class: lead -->
 # **基于 iostream 的流输入输出**
 
@@ -13,7 +19,6 @@ paginate: true
 ### 采用 “流” 的概念，通过<<（输出运算符）和>>（输入运算符）进行操作，语法简洁直观。
 
     cout << "The number is: " << num << endl;
-
 ---
 # **类型安全**
 ### 流输入输出会自动根据变量的类型进行处理，减少了因类型不匹配导致的错误。例如，在输入时会自动将输入的数据转换为相应变量的类型。
