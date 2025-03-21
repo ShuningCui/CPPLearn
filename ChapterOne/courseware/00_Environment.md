@@ -49,10 +49,11 @@ https://github.com/ShuningCui/CPPLearn
 ### 2. **安装C++编译器**
 - **macOS系统**：
     - 可以使用Xcode Command Line Tools。打开终端，输入`xcode-select --install`，按照提示完成安装。
-    - 安装完成后，在终端输入`g++ --version`，若显示版本信息，则安装成功。
+  
 - **Linux系统**：
     - 以Ubuntu为例，打开终端，输入`sudo apt-get update`更新软件源，然后输入`sudo apt-get install g++`安装GCC编译器。
-    - 安装完成后，在终端输入`g++ --version`，若显示版本信息，则安装成功。
+
+安装完成后，在终端输入`g++ --version`，若显示版本信息，则安装成功。
 
 ---
 
@@ -85,3 +86,9 @@ int main() {
 }
 ```
 按下右上角的运行按钮，查看运行结果。
+
+---
+
+### 6. 运行c++程序
+
+![bg fit ](../Pics/vscode_gcc.png)
