@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 namespace ns1
 {
     int x = 10;
@@ -15,6 +15,8 @@ namespace ns2
         std::cout << "ns2::x = " << x << std::endl;
     }
 }
+using namespace ns1;
+using namespace ns2;
 int main()
 {
     ns1::display();
