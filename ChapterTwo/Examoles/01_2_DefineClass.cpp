@@ -1,17 +1,19 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
 class AccessRights
 {
-    private:
-        int a;
-    public:
-        int c;
-    public:
-        void Display();
-        void SetA(int a);
-        int GetA();
+private:
+    int a;
+
+public:
+    int c;
+
+public:
+    void Display();
+    void SetA(int a);
+    int GetA();
 };
 
 void AccessRights::Display()
@@ -33,17 +35,17 @@ int AccessRights::GetA()
 int main()
 {
     AccessRights ar;
-    //Error
-    //ar.a = 10;
+    // Error
+    // ar.a = 10;
     ar.SetA(10);
 
-    ar.c = 20;  //Ok, c is public
+    ar.c = 20; // Ok, c is public
     ar.Display();
 
     int a = ar.GetA();
     cout << "a: " << a << endl;
 
-    //Error
-    //a=ar.a;
+    // Error
+    // a=ar.a;
     return 0;
 }

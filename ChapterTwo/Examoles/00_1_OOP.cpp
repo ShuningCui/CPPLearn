@@ -1,5 +1,5 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -14,10 +14,10 @@ int main()
     cin >> a >> b >> c;
     if (IsTriangle(a, b, c))
     {
-        cout << "The area of the triangle is: " 
-        << GetArea(a, b, c) << endl;
-        cout << "The perimeter of the triangle is: " 
-        << GetPerimeter(a, b, c) << endl;
+        cout << "The area of the triangle is: "
+            << GetArea(a, b, c) << endl;
+        cout << "The perimeter of the triangle is: "
+            << GetPerimeter(a, b, c) << endl;
     }
     else
         cout << "The sides do not form a triangle." << endl;
@@ -38,4 +38,4 @@ double GetArea(int a, int b, int c)
 int GetPerimeter(int a, int b, int c)
 {
     return a + b + c;
-} 
+}
