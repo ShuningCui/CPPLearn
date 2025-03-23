@@ -4,3 +4,4 @@
 + 本课程假设学生已经学习了C语言的课程。
 + 课件采用markdown格式编写，并使用marp渲染。请在vscode中安装marp。参考：https://marp.app
 + 视频讲解于2025年录制。
++ 代码在vscode + gcc 14.2.0 运行通过。
