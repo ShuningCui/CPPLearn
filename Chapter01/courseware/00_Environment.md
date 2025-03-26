@@ -91,4 +91,4 @@ int main() {
 
 ### 6. 运行c++程序
 
-![bg fit ](../Pics/vscode_gcc.png)
+![bg fit](../Pics/vscode_gcc.png)
