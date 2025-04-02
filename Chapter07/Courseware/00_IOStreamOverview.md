@@ -1,15 +1,8 @@
 ---
 marp: true
-theme: am_red
+theme: MyGaia
 paginate: true
 ---
-<style>
-   em{
-        font-style: normal;
-        font-weight: bold;
-        color: purple;
-   }
-</style>
 
 <!-- _class: lead -->
 # **输入输出流概述**
@@ -92,8 +85,7 @@ C++的iostream类库提供了数百种I/O功能，iostream类库的接口部分�
 ---
 
 ### **继承关系图**
-
-![bg h:500](../pic/pic1-1.png)
+![#c h:500](../pic/pic1-1.png)
 
 ---
 
@@ -232,3 +224,7 @@ int main() {
 - **保存原始缓冲区**：`std::cin.rdbuf()` 和 `std::cout.rdbuf()` 分别获取 `std::cin` 和 `std::cout` 的原始缓冲区指针并保存。
 - **重定向操作**：`std::cin.rdbuf(inFile.rdbuf())` 和 `std::cout.rdbuf(outFile.rdbuf())` 把 `std::cin` 和 `std::cout` 的缓冲区替换为文件流的缓冲区，从而实现重定向。
 - **恢复缓冲区**：最后将原始缓冲区指针重新设置回去，恢复默认的输入输出。 
+
+---
+
+> kenfsnavsdcdsvaskvsd
