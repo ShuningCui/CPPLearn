@@ -11,7 +11,7 @@ protected:
     int wheels;
 public:
     // 基类构造函数
-    Vehicle(const std::string& b, int w) : brand(b), wheels(w) 
+    Vehicle(const string& b, int w) : brand(b), wheels(w) 
     {
         cout << "Vehicle constructor called" << endl;
     }
@@ -47,7 +47,7 @@ private:
     int batteryCapacity;
 public:
     // 派生类构造函数，调用基类构造函数
-    ElectricVehicle(const std::string& b, int w, int p, int bc)
+    ElectricVehicle(const string& b, int w, int p, int bc)
         : Vehicle(b, w), ElectricalDevice(p), batteryCapacity(bc) 
     {
         cout << "ElectricVehicle constructor called" << endl;

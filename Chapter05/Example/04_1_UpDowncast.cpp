@@ -6,7 +6,8 @@ using namespace std;
 class Shape
 {
 public:
-    virtual void draw( ) const
+    //virtual ~Shape() {} // Virtual destructor to make the class polymorphic
+    void draw( ) const
     {
         cout << "Drawing a generic shape." << endl;
     }
@@ -16,7 +17,7 @@ public:
 class Circle : public Shape
 {
 public:
-    void draw( ) const override
+    void draw( ) const
     {
         cout << "Drawing a circle." << endl;
     }
@@ -30,7 +31,7 @@ public:
 class Rectangle : public Shape
 {
 public:
-    void draw( ) const override
+    void draw( ) const
     {
         cout << "Drawing a rectangle." << endl;
     }
@@ -53,6 +54,6 @@ int main( )
     shape.draw( ); // 调用基类的 draw 方法
 
     //Circle newCircle = (Circle)shape; // 向下转型：基类对象转换为派生类对象
-
+    Circle* newCircle = static_cast<Circle*>(shapePtr1); // 向下转型：基类指针转换为派生类指针
     return 0;
 }
