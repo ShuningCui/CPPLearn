@@ -3,9 +3,6 @@
 @charset "UTF-8";
 @import 'gaia';
 
-section {
-  text-align: justify;
-}
 
 em {
   font-style: normal;
@@ -32,6 +29,32 @@ img[alt*='#c'] {
   margin: auto;
 }
 
+blockquote {
+  border-left: 5px solid #007BFF;
+  padding-left: 20px;
+  margin: 1em 0;
+  position: relative;
+
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    right: 0;
+    bottom: 0;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
 section.cols-2 {
   overflow: visible;
   display: grid;
