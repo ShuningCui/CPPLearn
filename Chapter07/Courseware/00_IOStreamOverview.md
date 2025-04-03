@@ -3,7 +3,6 @@ marp: true
 theme: MyGaia
 paginate: true
 ---
-
 <!-- _class: lead -->
 # **输入输出流概述**
 
@@ -193,23 +192,21 @@ int main() {
 
 #### 使用 C++ 流对象的 `rdbuf` 成员函数
 除了 `freopen` 函数，C++ 还可以通过流对象的 `rdbuf` 成员函数来实现重定向。
-#### 示例代码
----
 
+
+---
+#### 示例代码
 ```cpp
 int main() {
     std::ifstream inFile("input.txt");
-    std::ofstream outFile("output.txt");
-    // 保存原始的输入输出缓冲区
+    std::ofstream outFile("output.txt");// 保存原始的输入输出缓冲区
     std::streambuf* cinBuf = std::cin.rdbuf();
-    std::streambuf* coutBuf = std::cout.rdbuf();
-    // 重定向输入输出
+    std::streambuf* coutBuf = std::cout.rdbuf();// 重定向输入输出
     std::cin.rdbuf(inFile.rdbuf());
     std::cout.rdbuf(outFile.rdbuf());
     int num;
     std::cin >> num;
-    std::cout << "读取的数字是: " << num << std::endl;
-    // 恢复原始的输入输出缓冲区
+    std::cout << "读取的数字是: " << num << std::endl; // 恢复原始的输入输出缓冲区
     std::cin.rdbuf(cinBuf);
     std::cout.rdbuf(coutBuf);
     inFile.close();
@@ -224,7 +221,3 @@ int main() {
 - **保存原始缓冲区**：`std::cin.rdbuf()` 和 `std::cout.rdbuf()` 分别获取 `std::cin` 和 `std::cout` 的原始缓冲区指针并保存。
 - **重定向操作**：`std::cin.rdbuf(inFile.rdbuf())` 和 `std::cout.rdbuf(outFile.rdbuf())` 把 `std::cin` 和 `std::cout` 的缓冲区替换为文件流的缓冲区，从而实现重定向。
 - **恢复缓冲区**：最后将原始缓冲区指针重新设置回去，恢复默认的输入输出。 
-
----
-
-> kenfsnavsdcdsvaskvsd
