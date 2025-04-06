@@ -1,16 +1,8 @@
 ---
 marp: true
-theme: gaia
+theme: MyGaia
 paginate: true
 ---
-<style>
-   em{
-        font-style: normal;
-        font-weight: bold;
-        color: purple;
-   }
-</style>
-
 <!-- _class: lead -->
 # **虚函数和抽象类**
 
