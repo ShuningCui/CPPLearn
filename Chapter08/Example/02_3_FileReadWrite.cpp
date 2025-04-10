@@ -12,7 +12,7 @@ using namespace std;  // 使用标准命名空间
 
 int main( )  // 主函数
 {
-    ifstream inFile("line.txt", ios::in);  // 创建一个输入文件流对象，打开文件line.txt
+    ifstream inFile("score.txt", ios::in);  // 创建一个输入文件流对象，打开文件line.txt
     if (!inFile)  // 检查文件是否成功打开
     {
         cerr << "无法打开文件" << endl;  // 如果无法打开文件，输出错误信息

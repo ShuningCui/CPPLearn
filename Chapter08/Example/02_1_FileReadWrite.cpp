@@ -12,7 +12,7 @@ using namespace std;  // 使用标准命名空间
 int main( )  // 主函数
 {
     ofstream outFile("score.txt", ios::out);  // 创建一个输出文件流对象，打开文件score.txt
-    if (!outFile)  // 检查文件是否成功打开
+    if (!outFile.is_open( ))  // 检查文件是否成功打开
     {
         cerr << "无法打开文件" << endl;  // 如果无法打开文件，输出错误信息
         return 1;  // 返回错误代码1

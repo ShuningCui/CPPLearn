@@ -7,8 +7,8 @@ using namespace std;  // 使用标准命名空间
 class Student
 {
 public:
-    string studentID;  // 学号
-    string name;       // 姓名
+    char studentID[20];  // 学号
+    char name[20];       // 姓名
     float score;           // 成绩
 };
 
