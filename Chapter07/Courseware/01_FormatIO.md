@@ -4,7 +4,7 @@ theme: MyGaia
 paginate: true
 ---
 <!-- _class: lead -->
-# **输入输出流概述**
+# **格式化输入输出**
 
 ---
 
@@ -23,36 +23,36 @@ paginate: true
 
 ---
 
-|标志|说明|
-|---|---|
-|`ios::skipws`|跳过输入流中的空白字符|
-|`ios::left`|在域中左对齐输出，必要时在右边显示填充字符|
-|`ios::right`|在域中右对齐输出，必要时在左边显示填充字符|
-|`ios::internal`|表示数字的符号应在域中左对齐，而数字值应在域中右对齐（即在符号和数值之间填充字符）|
-|`ios::adjustfield`|`left`，`right`和`internal`可以通称为对齐域|
-|`ios::dec`|指定整数作为十进制(基数10)值|
-|`ios::oct`|指定整数作为八进制(基数8)值|
+| 标志               | 说明                                                                               |
+| ------------------ | ---------------------------------------------------------------------------------- |
+| `ios::skipws`      | 跳过输入流中的空白字符                                                             |
+| `ios::left`        | 在域中左对齐输出，必要时在右边显示填充字符                                         |
+| `ios::right`       | 在域中右对齐输出，必要时在左边显示填充字符                                         |
+| `ios::internal`    | 表示数字的符号应在域中左对齐，而数字值应在域中右对齐（即在符号和数值之间填充字符） |
+| `ios::adjustfield` | `left`，`right`和`internal`可以通称为对齐域                                        |
+| `ios::dec`         | 指定整数作为十进制(基数10)值                                                       |
+| `ios::oct`         | 指定整数作为八进制(基数8)值                                                        |
 
 ---
 
-|标志|说明|
-|---|---|
-|`ios::hex`|指定整数作为十六进制(基数16)值|
-|`ios::basefield`|`oct`，`dec`和`hex`通称为基数域|
-|`ios::showbase`|指定在数值前面输出进制（0表示八进制，0x或0X表示十六进制）|
-|`ios::showpoint`|指定浮点数输出时应带小数点。通常和`ios::fixed`一起使用，保证小数点后面有一定位数|
-|`ios::uppercase`|指定表示十六进制的x应为大写，表示浮点数科学计数法的e应为大写|
+| 标志             | 说明                                                                             |
+| ---------------- | -------------------------------------------------------------------------------- |
+| `ios::hex`       | 指定整数作为十六进制(基数16)值                                                   |
+| `ios::basefield` | `oct`，`dec`和`hex`通称为基数域                                                  |
+| `ios::showbase`  | 指定在数值前面输出进制（0表示八进制，0x或0X表示十六进制）                        |
+| `ios::showpoint` | 指定浮点数输出时应带小数点。通常和`ios::fixed`一起使用，保证小数点后面有一定位数 |
+| `ios::uppercase` | 指定表示十六进制的x应为大写，表示浮点数科学计数法的e应为大写                     |
 
 ---
 
-|标志|说明|
-|---|---|
-|`ios::showpos`|指定正数和负数前面分别加上+和-号|
-|`ios::scientific`|指定浮点数输出采用科学记数法|
-|`ios::fixed`|指定浮点数输出采用定点符号，保证小数点后面有一定位数|
-|`ios::floatfield`|`scientific`和`fixed`域可以称为浮点域|
-|`ios::boolalpha`|指定可以用关键字`true`和`false`输入或输出布尔值|
-|`ios::unitbuf`|指定缓冲区在每次插入操作之后都会被刷新|
+| 标志              | 说明                                                 |
+| ----------------- | ---------------------------------------------------- |
+| `ios::showpos`    | 指定正数和负数前面分别加上+和-号                     |
+| `ios::scientific` | 指定浮点数输出采用科学记数法                         |
+| `ios::fixed`      | 指定浮点数输出采用定点符号，保证小数点后面有一定位数 |
+| `ios::floatfield` | `scientific`和`fixed`域可以称为浮点域                |
+| `ios::boolalpha`  | 指定可以用关键字`true`和`false`输入或输出布尔值      |
+| `ios::unitbuf`    | 指定缓冲区在每次插入操作之后都会被刷新               |
 
 ---
 
@@ -196,55 +196,55 @@ int main() {
 
 ---
 
-|流操纵符|用途|输入／输出|
-|---|---|---|
-|`boolalpha`|开启`boolapha`标志|输入／输出|
-|`dec`|开启`dec`标志|输入／输出|
-|`endl`|输出一个换行符并刷新流|输出|
-|`ends`|输出一个null|输出|
-|`fixed`|开启`fixed`标志|输出|
-|`flush`|刷新一个流|输出|
-|`hex`|开启`hex`标志|输入／输出|
-|`internal`|开启`internal`标志|输出|
+| 流操纵符    | 用途                   | 输入／输出 |
+| ----------- | ---------------------- | ---------- |
+| `boolalpha` | 开启`boolapha`标志     | 输入／输出 |
+| `dec`       | 开启`dec`标志          | 输入／输出 |
+| `endl`      | 输出一个换行符并刷新流 | 输出       |
+| `ends`      | 输出一个null           | 输出       |
+| `fixed`     | 开启`fixed`标志        | 输出       |
+| `flush`     | 刷新一个流             | 输出       |
+| `hex`       | 开启`hex`标志          | 输入／输出 |
+| `internal`  | 开启`internal`标志     | 输出       |
 
 ---
 
-|流操纵符|用途|输入／输出|
-|---|---|---|
-|`Left`|开启`left`标志|输出|
-|`nobooalpha`|关闭`boolalpha`标志|输入／输出|
-|`Noshowbase`|关闭`showbase`标志|输出|
-|`Noshowpoint`|关闭`showpoint`标志|输出|
-|`Noshowpos`|关闭`showpos`标志|输出|
-|`Noskipws`|关闭`skipws`标志|输入|
-|`nounitbuf`|关闭`unitbuf`标志|输出|
-|`nouppercase`|关闭`uppercase`标志|输出|
+| 流操纵符      | 用途                | 输入／输出 |
+| ------------- | ------------------- | ---------- |
+| `Left`        | 开启`left`标志      | 输出       |
+| `nobooalpha`  | 关闭`boolalpha`标志 | 输入／输出 |
+| `Noshowbase`  | 关闭`showbase`标志  | 输出       |
+| `Noshowpoint` | 关闭`showpoint`标志 | 输出       |
+| `Noshowpos`   | 关闭`showpos`标志   | 输出       |
+| `Noskipws`    | 关闭`skipws`标志    | 输入       |
+| `nounitbuf`   | 关闭`unitbuf`标志   | 输出       |
+| `nouppercase` | 关闭`uppercase`标志 | 输出       |
 
 ---
 
-|流操纵符|用途|输入／输出|
-|---|---|---|
-|`oct`|开启`oct`标志|输入／输出|
-|`resetiosflags(fmtflags f)`|关闭`f`中指定的标志|输入／输出|
-|`right`|开启`right`标志|输出|
-|`scientific`|开启`scientific`标志|输出|
-|`setbase(int base)`|将基数设置为`base`|输入／输出|
-|`setfill(int ch)`|将填充字符设置为`ch`|输出|
-|`setiosflags(fmtflags f)`|开启`f`中指定的标志|输入／输出|
-|`setprecision(int p)`|设置数字精度|输出|
+| 流操纵符                    | 用途                 | 输入／输出 |
+| --------------------------- | -------------------- | ---------- |
+| `oct`                       | 开启`oct`标志        | 输入／输出 |
+| `resetiosflags(fmtflags f)` | 关闭`f`中指定的标志  | 输入／输出 |
+| `right`                     | 开启`right`标志      | 输出       |
+| `scientific`                | 开启`scientific`标志 | 输出       |
+| `setbase(int base)`         | 将基数设置为`base`   | 输入／输出 |
+| `setfill(int ch)`           | 将填充字符设置为`ch` | 输出       |
+| `setiosflags(fmtflags f)`   | 开启`f`中指定的标志  | 输入／输出 |
+| `setprecision(int p)`       | 设置数字精度         | 输出       |
 
 ---
 
-|流操纵符|用途|输入／输出|
-|---|---|---|
-|`setw(int w)`|将域宽设置为`w`|输出|
-|`showbase`|开启`showbase`标志|输出|
-|`showpoint`|开启`showpoint`标志|输出|
-|`showpos`|开启`showpos`标志|输出|
-|`skipws`|开启`skipws`标志|输入|
-|`unitbuf`|开启`unitbuf`标志|输出|
-|`uppercase`|开启`uppercase`标志|输出|
-|`ws`|跳过开始的空格|输入|
+| 流操纵符      | 用途                | 输入／输出 |
+| ------------- | ------------------- | ---------- |
+| `setw(int w)` | 将域宽设置为`w`     | 输出       |
+| `showbase`    | 开启`showbase`标志  | 输出       |
+| `showpoint`   | 开启`showpoint`标志 | 输出       |
+| `showpos`     | 开启`showpos`标志   | 输出       |
+| `skipws`      | 开启`skipws`标志    | 输入       |
+| `unitbuf`     | 开启`unitbuf`标志   | 输出       |
+| `uppercase`   | 开启`uppercase`标志 | 输出       |
+| `ws`          | 跳过开始的空格      | 输入       |
 
 ---
 
